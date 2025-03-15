@@ -4,20 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>時間計算</title>
+    <style>
+        .center-text {
+            text-align: center;
+        }
+        .large-input {
+            height: 40px;
+            font-size: 16px;
+        }
+        .large-button {
+            width: 30%;
+            height: 40px;
+            font-size: 16px;
+        }
+        .bottom-text {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>時間計算</h1>
     <form method="POST">
-        <label for="time1">時間1 (hhmm):</label>
-        <input type="text" id="time1" name="time1" required>
+        <label for="time1">累積時間:</label>
+        <input type="text" id="time1" name="time1" class="large-input" required>
         <br>
-        <label for="time2">時間2 (hhmm):</label>
-        <input type="text" id="time2" name="time2" required>
+        <label for="time2">時間:</label>
+        <input type="text" id="time2" name="time2" class="large-input" required>
         <br>
-        <button type="submit">計算</button>
+        <button type="submit" class="large-button">計算Go！</button>
     </form>
     {% if total_time is not none %}
         <h2>合計時間: {{ total_time }}</h2>
     {% endif %}
+    <div class="bottom-text">
+        ”楽Tech!"
+    </div>
 </body>
 </html>
