@@ -38,13 +38,13 @@
     margin-bottom: 20px; /* インプットボックスの間隔を広げる */
     display: block;
     width: 30vw; /* 画面幅の30% */
-    max-width: 300px; /* 最大幅を設定 */
+    max-width: 500px; /* 最大幅を設定 */
     box-sizing: border-box;
 }
 
 .large-button {
     width: 30vw; /* 画面幅の30% */
-    max-width: 300px; /* 最大幅を設定 */
+    max-width: 30vw; /* 最大幅を設定 */
     height: 50px; /* ボタンの高さを大きくする */
     font-size: 18px; /* ボタンのフォントサイズを大きくする */
     margin-top: 20px; /* ボタンの間隔を広げる */
