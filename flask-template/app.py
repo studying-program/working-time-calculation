@@ -22,7 +22,7 @@ def index():
             total_minutes = total_minutes % 60
             total_time = f"{total_hours:02}:{total_minutes:02}"
         except ValueError:
-            total_time = "無効な入力. Please enter time in hhmm format."
+            total_time = ". Please enter time in hhmm format."
     return render_template('index.html', total_time=total_time)
 
 if __name__ == '__main__':
