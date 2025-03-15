@@ -4,10 +4,10 @@ import re
 app = Flask(__name__)
 
 def parse_time(time_str):
-    match = re.match(r'^(\d{1,2}):(\d{2})$', time_str)
-    if not match:
+    if not re.match(r'^\d{4}$', time_str):
         raise ValueError("Invalid time format")
-    hours, minutes = map(int, match.groups())
+    hours = int(time_str[:2])
+    minutes = int(time_str[2:])
     return hours, minutes
 
 @app.route('/', methods=['GET', 'POST'])
@@ -22,7 +22,7 @@ def index():
             total_minutes = total_minutes % 60
             total_time = f"{total_hours:02}:{total_minutes:02}"
         except ValueError:
-            total_time = "Invalid input. Please enter time in hh:mm format."
+            total_time = "Invalid input. Please enter time in hhmm format."
     return render_template('index.html', total_time=total_time)
 
 if __name__ == '__main__':
