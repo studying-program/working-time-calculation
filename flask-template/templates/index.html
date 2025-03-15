@@ -4,38 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>時間計算</title>
-    <style>
-        .center-text {
-            text-align: center;
-        }
-        .large-input {
-            height: 40px;
-            font-size: 16px;
-            margin-bottom: 20px; /* インプットボックスの間隔を広げる */
-        }
-        .large-button {
-            width: 30%;
-            height: 40px;
-            font-size: 16px;
-            margin-top: 20px; /* ボタンの間隔を広げる */
-        }
-        .bottom-text {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
 </head>
 <body>
     <h1>時間計算</h1>
     <form method="POST">
-        <label for="time1">累積時間:</label>
-        <input type="text" id="time1" name="time1" class="large-input" required>
-        <br>
-        <label for="time2">時間:</label>
-        <input type="text" id="time2" name="time2" class="large-input" required>
-        <br>
+        <div class="form-group">
+            <label for="time1" class="form-label">累積時間:</label>
+            <input type="text" id="time1" name="time1" class="large-input" required>
+        </div>
+        <div class="form-group">
+            <label for="time2" class="form-label">時間:</label>
+            <input type="text" id="time2" name="time2" class="large-input" required>
+        </div>
         <button type="submit" class="large-button">計算Go！</button>
     </form>
     {% if total_time is not none %}

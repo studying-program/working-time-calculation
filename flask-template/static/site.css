@@ -25,3 +25,27 @@
     padding: 5px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.large-input {
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px; /* インプットボックスの間隔を広げる */
+    display: block;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.large-button {
+    width: 30%;
+    height: 50px; /* ボタンの高さを大きくする */
+    font-size: 18px; /* ボタンのフォントサイズを大きくする */
+    margin-top: 20px; /* ボタンの間隔を広げる */
+}
+
+.bottom-text {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+}
