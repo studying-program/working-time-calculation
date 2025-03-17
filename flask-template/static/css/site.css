@@ -31,6 +31,7 @@
     height: 100vh;
     text-align: center;
     background-image: url('/static/images/clock.jpg');
+    color: rgb(217, 217, 217)
 }
 
 .large-input, .large-button {
